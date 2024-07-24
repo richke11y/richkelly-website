@@ -1,0 +1,48 @@
+---
+import HTMLHeadComments from '@components/html-head/HTML-Head-Comments.astro';
+import HTMLHeadFavicons from '@components/html-head/HTML-Head-Favicons.astro';
+import HTMLHeadGA from '@components/html-head/HTML-Head-GA.astro';
+
+const basePath = import.meta.env.BASE_URL;
+const isProd = import.meta.env.PROD;
+
+// CANONICAL URL
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<head>
+
+	{isProd && <HTMLHeadGA /> }
+
+	<meta charset="utf-8">
+
+	<HTMLHeadComments />
+
+	<title set:text={'Richard Kelly ~ Independent Front-End Web Development'} />
+
+	<meta name="viewport" content="width=device-width" />
+	<meta name="description" content={''} />
+	<meta name="generator" content={Astro.generator} />
+
+	<meta property="og:title" content={''} />
+	<meta property="og:description" content={''} />
+	<meta property="og:image" content={''} />
+	<meta property="og:url" content={''} />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content={''} />
+
+	<link rel="canonical" href={canonicalURL} />
+	<link rel="sitemap" href={`${basePath}sitemap-index.xml`} />
+
+	<HTMLHeadFavicons />
+
+	<!-- <HTMLHeadTypekit /> -->
+
+	<!-- <HTMLHeadGoogleStructuredData description={metaDescription} name={metaSiteName} /> -->
+
+	<script is:inline>document.documentElement.classList.replace('no-js', 'js');</script>
+
+	<script src="@js/main.js"></script>
+
+</head>

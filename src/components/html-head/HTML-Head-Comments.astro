@@ -1,0 +1,24 @@
+---
+import {name} from '../../../package.json';
+import {version} from '../../../package.json';
+import {author} from '../../../package.json';
+
+const site = import.meta.env.SITE;
+const env = process.env.NODE_ENV;
+const date = new Date();
+
+let string = `
+	<!-- * * * * * * * * * * * * * * * * * * 
+
+	${site}
+	Name: ${name}
+	Version: ${version}
+	Branch: ${env}
+	Date: ${date}
+	Web Development: ${author}
+
+	* * * * * * * * * * * * * * * * * * * * -->
+`;
+---
+
+	<Fragment set:html={string} />

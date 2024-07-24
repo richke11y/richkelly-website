@@ -1,0 +1,26 @@
+{
+  "name": "richkelly-website",
+  "type": "module",
+  "version": "0.0.1",
+  "author": "Rich Kelly <rich@richkelly.uk> (http://richkelly.uk)",
+  "homepage": "https://github.com/richke11y/richkelly-website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/richke11y/richkelly-website.git"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "NODE_ENV=development astro dev --mode development --host",
+    "build": "NODE_ENV=development astro build --mode development",
+    "staging": "NODE_ENV=staging astro build --mode staging",
+    "production": "astro build --mode production",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/prefetch": "^0.4.1",
+    "@astrojs/sitemap": "^3.1.6",
+    "astro": "^4.12.2",
+    "astro-icon": "^1.1.0"
+  }
+}

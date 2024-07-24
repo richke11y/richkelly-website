@@ -1,0 +1,43 @@
+---
+const site = import.meta.env.SITE;
+
+const { description, name } = Astro.props;
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "Restaurant",
+	"name": `${name}`,
+	"description": `${description}`,
+	"url": `${site}`,
+	"logo": `${site}lisboeta-logo.jpg`,
+	"image": `${site}lisboeta-image.jpg`,
+	"email": "contact@lisboeta.co.uk",
+	"telephone": "+44 20 3830 9888",
+	"servesCuisine": "Portuguese",
+	"priceRange": "£££",
+	"sameAs": [
+		"https://www.instagram.com/lisboeta.london/"
+	],
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "30 Charlotte Street",
+		"addressLocality": "London",
+		"postalCode": "W1T 2NG",
+		"addressCountry": "GB"
+	},
+	"hasMap": "https://maps.app.goo.gl/1aJWyJ6EzjgEN8tRA",
+	"aggregateRating": {
+		"@type": "AggregateRating",
+		"ratingValue": "4.5",
+		"reviewCount": "685"
+  	},
+	"openingHours": [
+		"Mo-Fr 17:30-23:00",
+		"Tu-Sa 12:00-14:00",
+		"Tu-Sa 17:30-23:00",
+		"Su Closed"
+ 	]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
