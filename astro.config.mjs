@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import prefetch from '@astrojs/prefetch';
 import icon from 'astro-icon';
 import sitemap from '@astrojs/sitemap';
+
 const env = process.env.NODE_ENV;
 
 let config = {
