@@ -1,0 +1,36 @@
+.page-container {
+	display: flex;
+	flex-direction: column;
+
+	width: min(100%, 140ch);
+	height: 100%;
+	padding: 0 7vw;
+
+	@media screen and (max-width: 767px) {
+
+		justify-content: center;
+
+	}
+
+}
+
+.page-titles {
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	
+		height: calc(50vh - 3em);
+	}
+
+}
+
+.page-body {
+	width: min(100%, 60ch);
+	margin: 5ch 0 0 0;
+}
+
+.links-list {
+	margin: 3ch 0 0 0;
+}
