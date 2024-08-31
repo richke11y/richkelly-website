@@ -5,8 +5,34 @@ import Layout from '@layouts/Layout.astro';
 ---
 <Layout>
 	
-	<h1>_richkelly</h1>
+	<div class:list={'page-container'}>
+
+		<div class:list={'page-titles'}>
+
+			<h1 set:text={'richkelly_'} class:list={'title title--h1'} />
 	
-	<h2>independent-frontend-web-development</h2>
+			<h2 set:text={'Independent Frontend Web Development'} class:list={'title title--h2'} />
+
+		</div>
+
+		<div class:list={'page-body'}>
+
+			<p set:text={'Hello, my name is Rich and I\'m a front-end web developer with over 15 years experience building websites for customers in the hospitality, restaurant, music, fashion, clothing and jewellery sectors.'} />
+
+			<ul class:list={'links-list'}>
+
+				<li>
+					<a set:text={'github.com/richke11y'} class:list={'link'} href={'https://github.com/richke11y'} target={'_blank'} title={'github.com/richke11y'} rel={'noopener noreferrer'} />
+				</li>
+
+				<li>
+					<a set:text={'hello@richkelly.uk'} class:list={'link'} href={'mailto:hello@richkelly.uk'} target="_blank" title={'hello@richkelly.uk'} rel="noopener noreferrer" />
+				</li>
+
+			</ul>
+
+		</div>
+
+	</div>
 
 </Layout>
