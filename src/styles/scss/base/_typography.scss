@@ -1,8 +1,32 @@
 body {
-
-	font-family: "JetBrains Mono", monospace;
+	font-family: 'JetBrains Mono', monospace;
 	font-optical-sizing: auto;
-	font-weight: 400;
+	font-weight: 300;
 	font-style: normal;
+	font-size: 0.9em;
+	line-height: 1.5em;
+}
 
+p {
+	margin: 0 0 1em 0;
+}
+
+.title {
+	line-height: 1.35em;
+}
+
+.title--h1 {
+	font-size: clamp(3em, 14vw, 6.5em);
+}
+
+.title--h2 {
+	font-size: clamp(1.4em, 4vw, 1.8em);
+}
+
+.link {
+	font-weight: 600;
+}
+
+.link:hover {
+	text-decoration: underline;
 }
