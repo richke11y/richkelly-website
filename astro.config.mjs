@@ -10,7 +10,7 @@ let config = {
 	base: './',
 	compressHTML: env === 'development' ? false : true,
 	build: {
-		inlineStylesheets: env === 'development' ? 'never' : 'auto'
+		inlineStylesheets: env === 'development' ? 'never' : 'always'
 	}
 };
 
@@ -37,7 +37,8 @@ export default defineConfig({
 			hostname: '**.richkelly.uk'
 		}],
 		domains: [
-			'richkelly.uk'
+			'richkelly.uk',
+			'www.richkelly.uk'	
 		]
 	},
 	output: 'static',
