@@ -1,10 +1,10 @@
 body {
-	font-family: 'JetBrains Mono', monospace;
+	font-family: var(--fontfamily-jetbrains-reg);
 	font-optical-sizing: auto;
 	font-weight: 300;
 	font-style: normal;
-	font-size: 0.9em;
-	line-height: 1.5em;
+	font-size: 1em;
+	line-height: 1.6em;
 }
 
 p {
@@ -17,7 +17,6 @@ p {
 
 .title--h1 {
 	font-size: clamp(3em, 14vw, 7em);
-	font-weight: 600;
 }
 
 .title--h2 {
@@ -25,9 +24,31 @@ p {
 }
 
 .link {
-	font-weight: 600;
+	font-family: var(--fontfamily-jetbrains-bold);
+}
+
+.link--inline-block {
+	display: inline-block;
 }
 
 .link:hover {
 	text-decoration: underline;
+}
+
+.link--external {
+	position: relative;
+	padding: 0 15px 0 0;
+}
+
+.link--external:after {
+	content: '';
+
+	display: block;
+	width: 15px;
+	height: 75%;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNyAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNC4yNTgwNiAxMi4wMzU0TDguNTAwNyA3Ljc5Mjc3TDYuMzc5MzYgNS42NzE0MkwxMi4zODk4IDQuNjEwNzlMMTEuMzI5MSAxMC42MjEyTDkuMjA3ODEgOC40OTk4N0w0Ljk2NTE3IDEyLjc0MjVMNC4yNTgwNiAxMi4wMzU0WiIgZmlsbD0iIzRjYTZmZiIvPjwvc3ZnPg==);
 }
