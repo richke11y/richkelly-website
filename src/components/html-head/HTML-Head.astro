@@ -2,7 +2,6 @@
 import HTMLHeadComments from '@components/html-head/HTML-Head-Comments.astro';
 import HTMLHeadFavicons from '@components/html-head/HTML-Head-Favicons.astro';
 import HTMLHeadGA from '@components/html-head/HTML-Head-GA.astro';
-import HTMLHeadGoogleFont from '@components/html-head/HTML-Head-Google-Fonts.astro';
 import HTMLHeadGoogleStructuredData from '@components/html-head/HTML-Head-Google-Structured-Data.astro';
 
 const basePath = import.meta.env.BASE_URL;
@@ -38,8 +37,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 	<link rel="sitemap" href={`${basePath}sitemap-index.xml`} />
 
 	<HTMLHeadFavicons />
-
-	<HTMLHeadGoogleFont />	
 
 	<HTMLHeadGoogleStructuredData />
 
