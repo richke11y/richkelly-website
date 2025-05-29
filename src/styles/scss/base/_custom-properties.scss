@@ -1,13 +1,26 @@
 :root {
 
-	--colour-black: rgb(41, 41, 41);
 	--colour-dark-green: #1B2910;
 	--colour-light-green: #BBD0AC;
-	--colour-white: white;
 
 	--fontfamily-jetbrains-bold: 'JetBrains Mono Bold', monospace;
 	--fontfamily-jetbrains-semibold: 'JetBrains Mono Semibold', monospace;
 	--fontfamily-jetbrains-medium: 'JetBrains Mono Medium', monospace;
 	--fontfamily-jetbrains-reg: 'JetBrains Mono Regular', monospace;
+
+}
+
+html[data-colour-mode="dark"]:root {
+
+	--body-background-colour: var(--colour-dark-green);
+	--body-colour: var(--colour-light-green);
+
+}
+
+html[data-colour-mode="light"]:root,
+html[data-colour-mode="auto"]:root {
+
+	--body-background-colour: var(--colour-light-green);
+	--body-colour: var(--colour-dark-green);
 
 }

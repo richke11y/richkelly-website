@@ -1,6 +1,31 @@
 body {
 
-	background-color: var(--colour-dark-green);
-	color: var(--colour-light-green);
+	background-color: var(--body-background-colour);
+	color: var(--body-colour);
+
+	transition: background-color 150ms ease 0ms,
+				color 150ms ease 0ms;
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+	html[data-colour-mode="auto"] body {
+
+		background-color: var(--colour-dark-green);
+		color: var(--colour-light-green);
+
+	}
+
+}
+
+@media (prefers-color-scheme: light) {
+
+	html[data-colour-mode="auto"] body {
+
+		background-color: var(--colour-light-green);
+		color: var(--colour-dark-green);
+
+	}
 
 }
