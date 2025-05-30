@@ -1,0 +1,37 @@
+---
+import './colour-mode.scss';
+
+import IconLight from '@svg/icon-light.svg';
+import IconDark from '@svg/icon-dark.svg';
+import IconAuto from '@svg/icon-auto.svg';
+---
+
+<colour-mode>
+
+	<button class="button" data-colour-mode="light" aria-label="Light Mode">
+
+		<IconLight />
+
+		<span>Light</span>
+
+	</button>
+
+	<button class="button" data-colour-mode="dark" aria-label="Dark Mode">
+
+		<IconDark />
+
+		<span>Dark</span>
+
+	</button>
+
+	<button class="button" data-colour-mode="auto" aria-label="Auto Mode">
+
+		<IconAuto />
+
+		<span>Auto</span>
+
+	</button>
+
+</colour-mode>
+
+<script src="./colour-mode.js"></script>
