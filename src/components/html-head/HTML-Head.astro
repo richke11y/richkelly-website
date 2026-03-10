@@ -44,7 +44,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 	<script src="@js/main.js"></script>
 
-	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+	<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 	<script>
 		if (window.netlifyIdentity) {
