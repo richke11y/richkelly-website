@@ -1,0 +1,67 @@
+---
+import Layout from '@layouts/Layout.astro';
+import ColourMode from '@components/colour-mode/Colour-Mode.astro';
+import ContactForm from '@components/contact-form/contact-form.astro';
+---
+<Layout>
+	
+	<div class:list={'page-container'}>
+
+		<ContactForm />
+
+	</div>
+
+</Layout>
+
+<style>
+
+	.page-container {
+		display: flex;
+		flex-direction: column;
+
+		width: 100%;
+		height: 100%;
+		position: relative;
+		padding: 0 7vw;
+	}
+
+	.page-colour {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.page-body {
+		width: min(100%, 60ch);
+		margin: 5ch 0 0 0;
+	}
+
+	.links-list {
+		margin: 3ch 0 0 0;
+	}
+
+	@media screen and (max-width: 767px) {
+
+		.page-container {
+			justify-content: center;
+		}
+
+		.page-colour {
+			position: absolute;
+			top: 0;
+		}
+
+	}
+
+	@media screen and (min-width: 768px) {
+
+		.page-titles {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		
+			height: calc(50vh - 3em);
+		}
+
+	}
+
+</style>
