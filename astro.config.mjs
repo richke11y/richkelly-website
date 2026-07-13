@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 const env = process.env.NODE_ENV;
 
 let config = {
-	site: 'https://www.richkelly.uk',
+	site: 'https://richkelly.uk',
 	base: './',
 	compressHTML: env === 'development' ? false : true,
 	build: {
