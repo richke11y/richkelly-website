@@ -54,7 +54,7 @@ export default class ContactForm extends HTMLElement {
 
 	formReset() {
 
-		console.log('formReset()');
+		// console.log('formReset()');
 
 		this.form.reset();
 
@@ -95,8 +95,8 @@ export default class ContactForm extends HTMLElement {
 		const formData = new FormData(this.form);
 		const data = Object.fromEntries(formData.entries());
 
-		console.log(formData);
-		console.log(data);
+		// console.log(formData);
+		// console.log(data);
 
 		this.submitTheForm(data);
 
@@ -137,15 +137,15 @@ export default class ContactForm extends HTMLElement {
 				body: JSON.stringify(data)
 			});
 
-			console.log('response:');
-			console.log(response)
+			// console.log('response:');
+			// console.log(response);
 
 			const result = await response.json();
 
-			console.log('result:')
-			console.log(result);
+			// console.log('result:')
+			// console.log(result);
 
-			console.log(`response ok: ${response.ok}`);
+			// console.log(`response ok: ${response.ok}`);
 
 			if (response.status === 200 && result.success) {
 
